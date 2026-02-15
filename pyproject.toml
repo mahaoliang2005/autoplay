@@ -1,0 +1,37 @@
+[project]
+name = "autoplay"
+version = "0.1.0"
+description = "基于计算机视觉的自动化控制系统"
+requires-python = ">=3.10"
+dependencies = [
+    "opencv-python>=4.8.0",
+    "pyserial>=3.5",
+    "pillow>=10.0.0",
+    "keyboard>=0.13.5",
+    "pyyaml>=6.0",
+    "structlog>=24.0.0",
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "mypy>=1.5.0",
+    "ruff>=0.1.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/autoplay"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.mypy]
+python_version = "3.10"
+strict = true

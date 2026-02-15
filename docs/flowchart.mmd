@@ -1,0 +1,26 @@
+flowchart TD
+    A[程序启动] --> B[加载配置 config.yaml]
+    B --> C[配置日志系统]
+    C --> D[初始化 VideoCapture]
+    D --> E[初始化 ArduinoController]
+    E --> F[初始化 TargetDetector]
+    F --> G[初始化 KeyStateMachine]
+    G --> H{按 Esc 退出?}
+    H -->|是| Z[清理资源并退出]
+    H -->|否| I[捕获帧图像]
+    I --> J[保存截图]
+    J --> K[生成按键]
+    K --> L[目标检测]
+    L --> M{找到目标?}
+    M -->|否| N[记录警告]
+    M -->|是| O[计算方向与距离]
+    O --> P[发送指令到Arduino]
+    P --> Q[记录日志]
+    N --> H
+    Q --> H
+    Z --> R[程序结束]
+
+    style A fill:#90EE90
+    style R fill:#FFB6C1
+    style H fill:#FFD700
+    style M fill:#FFD700

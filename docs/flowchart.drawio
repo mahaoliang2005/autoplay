@@ -1,0 +1,180 @@
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="Mozilla/5.0" etag="autoplay-flowchart" version="22.1.0" type="device">
+  <diagram name="系统流程图" id="autoplay-flowchart">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" value="程序启动" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#90EE90;strokeColor=#82B366;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="520" y="40" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="load-config" value="加载配置 config.yaml" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#01579B;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="520" y="120" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="config-logger" value="配置日志系统" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#01579B;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="520" y="200" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="init-capture" value="初始化 VideoCapture" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#E65100;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="360" y="280" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="init-arduino" value="初始化 ArduinoController" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#E65100;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="520" y="280" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="init-detector" value="初始化 TargetDetector" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#E65100;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="700" y="280" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="init-keyboard" value="初始化 KeyStateMachine" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#E65100;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="520" y="360" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="check-exit" value="按 Esc 退出?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFD700;strokeColor=#B7950B;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="540" y="440" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="capture-frame" value="捕获帧图像" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="520" y="560" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="save-screenshot" value="保存截图" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="520" y="640" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="generate-key" value="生成按键" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="520" y="720" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="detect-target" value="目标检测" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="520" y="800" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="found-target" value="找到目标?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFD700;strokeColor=#B7950B;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="540" y="880" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="log-warning" value="记录警告" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#C62828;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="320" y="895" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="calculate" value="计算方向与距离" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="700" y="895" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="send-command" value="发送指令到Arduino" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#E65100;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="700" y="975" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="log-info" value="记录日志" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1565C0;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="700" y="1055" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="cleanup" value="清理资源并退出" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#B71C1C;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="200" y="460" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="end" value="程序结束" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFB6C1;strokeColor=#C2185B;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="200" y="560" width="120" height="50" as="geometry" />
+        </mxCell>
+        <!-- 连线 -->
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontSize=12" edge="1" parent="1" source="start" target="load-config">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontSize=12" edge="1" parent="1" source="load-config" target="config-logger">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontSize=12" edge="1" parent="1" source="config-logger" target="init-arduino">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="250" />
+              <mxPoint x="600" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontSize=12" edge="1" parent="1" source="config-logger" target="init-capture">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="430" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontSize=12" edge="1" parent="1" source="config-logger" target="init-detector">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="775" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontSize=12" edge="1" parent="1" source="init-arduino" target="init-keyboard">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontSize=12" edge="1" parent="1" source="init-capture" target="init-keyboard">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="430" y="385" />
+              <mxPoint x="600" y="385" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontSize=12" edge="1" parent="1" source="init-detector" target="init-keyboard">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="775" y="385" />
+              <mxPoint x="680" y="385" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontSize=12" edge="1" parent="1" source="init-keyboard" target="check-exit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4CAF50;fontSize=12;fontStyle=1" edge="1" parent="1" source="check-exit" target="capture-frame">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#F44336;fontSize=12;fontStyle=1" edge="1" parent="1" source="check-exit" target="cleanup">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="265" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontSize=12" edge="1" parent="1" source="capture-frame" target="save-screenshot">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontSize=12" edge="1" parent="1" source="save-screenshot" target="generate-key">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontSize=12" edge="1" parent="1" source="generate-key" target="detect-target">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontSize=12" edge="1" parent="1" source="detect-target" target="found-target">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" value="否" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#F44336;fontSize=12;fontStyle=1" edge="1" parent="1" source="found-target" target="log-warning">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="420" y="920" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e17" value="是" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4CAF50;fontSize=12;fontStyle=1" edge="1" parent="1" source="found-target" target="calculate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontSize=12" edge="1" parent="1" source="calculate" target="send-command">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontSize=12" edge="1" parent="1" source="send-command" target="log-info">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontSize=12" edge="1" parent="1" source="log-warning" target="check-exit">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="370" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontSize=12" edge="1" parent="1" source="log-info" target="check-exit">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="760" y="1100" />
+              <mxPoint x="760" y="1180" />
+              <mxPoint x="200" y="1180" />
+              <mxPoint x="200" y="1100" />
+              <mxPoint x="200" y="1000" />
+              <mxPoint x="200" y="920" />
+              <mxPoint x="370" y="920" />
+              <mxPoint x="370" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#666666;fontSize=12" edge="1" parent="1" source="cleanup" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

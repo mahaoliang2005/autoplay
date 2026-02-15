@@ -1,0 +1,47 @@
+# 视频捕获配置
+capture:
+  device_index: 1              # 摄像头索引
+  width: 1920                  # 分辨率宽
+  height: 1080                 # 分辨率高
+  screenshot_interval: 2       # 截图间隔（秒）
+  max_screenshots: 10          # 最大截图数量
+
+# 截图保存路径
+storage:
+  screenshot_dir: "~/Downloads/autoplay_screenshots"  # 支持~展开
+  auto_cleanup: true           # 退出时自动清理
+
+# 图像处理配置
+vision:
+  template_path: "./target1.png"
+  match_threshold: 0.2         # 模板匹配阈值
+  scales_start: 1.0            # 缩放范围起始
+  scales_end: 1.5              # 缩放范围结束
+  scales_steps: 5              # 缩放步数
+  # HSV颜色过滤范围
+  red_hsv_lower1: [0, 50, 50]
+  red_hsv_upper1: [10, 255, 255]
+  red_hsv_lower2: [170, 50, 50]
+  red_hsv_upper2: [180, 255, 255]
+
+# Arduino通信配置
+arduino:
+  vid: "0x2341"                # 十六进制字符串
+  pid: "0x006D"
+  baudrate: 9600
+  timeout: 1.0
+  # 连接重试配置
+  max_retries: 3
+  retry_delay: 0.5
+
+# 键盘控制配置
+keyboard:
+  exit_key: "esc"              # 退出按键
+  movement_keys: ["w", "a", "s", "d"]
+  action_keys: ["-", "f", "e", "r", "n"]
+
+# 日志配置
+logging:
+  level: "INFO"                # DEBUG/INFO/WARNING/ERROR
+  format: "colored"            # colored/json/plain
+  file: null                   # 日志文件路径，null表示仅控制台
